@@ -3,14 +3,13 @@ import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
 ---
 
-<header class="bg-red-50 p-2 h-16">
+<header class="bg-red-50 py-2 px-8 h-16">
   <nav
     class="flex items-center flex-row w-full gap-3 max-w-screen-lg m-auto h-full"
   >
     <h2><a href="/">{SITE_TITLE}</a></h2>
     <div class="flex-grow"></div>
     <div class="flex flex-row gap-5">
-      <HeaderLink href="/">Home</HeaderLink>
       <HeaderLink href="/blog">Blog</HeaderLink>
       <HeaderLink href="/about">About</HeaderLink>
       <HeaderLink href="https://github.com/jfkonecn" target="_blank"
