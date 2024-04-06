@@ -5,25 +5,50 @@ pubDate: "April 6 2024"
 heroImage: "/2024/declarative-csharp.jpg"
 ---
 
-## Temp
+Declarative programming is a bit of a fad in programming and with good reason.
+It has the ability to improve code readability. The readability is improved by
+allowing the developer to better describe the business process they writing software
+for. Though as with any approach it probably should not be used for every problem
+you have.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+## What is Declarative Programming?
 
-```ts
-const temp = "";
-console.log(temp);
+The simple definition of declarative programming is telling the computer what to
+do as opposed to imperative programming where you tell the computer how to do it.
+
+Let us take a look at what imperative programming looks like first as it is something
+most developer are comfortable with.
+
+```csharp
+public List<int> DoubleInts(List<int> numbers)
+{
+    var answer = new List<int>();
+    foreach(var num in numbers)
+    {
+        answer.Add(num * 2);
+    }
+    return answer;
+}
 ```
 
-| Tables        |      Are      |  Cool |
-| ------------- | :-----------: | ----: |
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      |   centered    |   $12 |
-| zebra stripes |   are neat    |    $1 |
+As you can see we are telling the computer to go through each element in our list
+and then add the result to a new list. While there is nothing wrong with this code
+it can be more annoying to deal with more complex logic. Let us take a look at the
+declarative way.
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+```csharp
+public List<int> DoubleInts(List<int> numbers)
+{
+    return numbers.Select(x => x * 2).ToList();
+}
+```
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
-
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+Here we have our fabled one liner! Admittedly we do not gain much by taking such
+an approach for a couple lines of code, but with more complex business logic
+you start to see the benefits. Something you might have noticed is how minimal
+the code is. With the declarative style more operations are done with less code.
+The con of this is that you have to know what a bunch of functions do. In imperative
+programming you have few function to remember so you can get away by just reading
+the code. Declarative programming forces you to have a bunch of utility function
+which means lots more reading of the documentation. However, once you learn these
+function you can do way more with way less.
