@@ -5,6 +5,8 @@ import Footer from "../../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
 import FormattedDate from "../../components/FormattedDate.astro";
+import Body from "../../components/Body.astro";
+import Main from "../../components/Main.astro";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
@@ -16,18 +18,17 @@ const posts = (await getCollection("blog")).sort(
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body>
+  <Body>
     <Header />
-    <main>
+    <Main class="flex-grow">
       <section>
         <ul>
           {
             posts.map((post) => (
-              <li>
+              <li class="w-full">
                 <a href={`/blog/${post.slug}/`}>
                   <img
-                    width={720}
-                    height={360}
+                    class="w-full h-96 object-contain"
                     src={post.data.heroImage}
                     alt=""
                   />
@@ -41,7 +42,7 @@ const posts = (await getCollection("blog")).sort(
           }
         </ul>
       </section>
-    </main>
+    </Main>
     <Footer />
-  </body>
+  </Body>
 </html>
