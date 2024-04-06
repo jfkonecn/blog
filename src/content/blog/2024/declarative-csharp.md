@@ -1,6 +1,6 @@
 ---
 title: "Declarative C#"
-description: "Explore the benefits of declarative programming C#"
+description: "Explore the benefits of declarative programming in C#"
 pubDate: "April 6 2024"
 heroImage: "/2024/declarative-csharp.jpg"
 ---
