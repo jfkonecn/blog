@@ -1,8 +1,8 @@
 ---
-title: "Test"
-description: "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet"
-pubDate: "Jul 22 2022"
-heroImage: "/placeholder.jpg"
+title: "Declarative C#"
+description: "Explore the benefits of declarative programming C#"
+pubDate: "April 6 2024"
+heroImage: "/2024/declarative-csharp.jpg"
 ---
 
 ## Temp
