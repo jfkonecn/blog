@@ -3,13 +3,12 @@ import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
 ---
 
-<header class="bg-red-50 py-2 px-8 h-16">
-  <nav
-    class="flex items-center flex-row w-full gap-3 max-w-screen-lg m-auto h-full"
-  >
-    <h2><a href="/">{SITE_TITLE}</a></h2>
-    <div class="flex-grow"></div>
-    <div class="flex flex-row gap-5">
+<header class="py-10 px-8 border-b">
+  <nav class="w-full max-w-screen-lg m-auto h-full text-center">
+    <h2 class="float-none md:float-left">
+      <HeaderLink href="/">{SITE_TITLE}</HeaderLink>
+    </h2>
+    <div class="float-none md:float-right *:px-4">
       <HeaderLink href="/blog">Blog</HeaderLink>
       <HeaderLink href="/about">About</HeaderLink>
       <HeaderLink href="https://github.com/jfkonecn" target="_blank"

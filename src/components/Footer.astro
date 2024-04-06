@@ -2,14 +2,12 @@
 const today = new Date();
 ---
 
-<footer class="bg-red-50 p-2 h-16">
-  <div
-    class="flex items-center flex-row w-full gap-3 max-w-screen-lg m-auto
-    h-full"
-  >
-    &copy; {today.getFullYear()} John Konecny. All rights reserved.
-    <div class="flex-grow"></div>
-    <div class="social-links">
+<footer class="py-10 px-8 text-center border-t">
+  <div class="w-full gap-3 max-w-screen-lg mx-auto align-middle m-auto">
+    <div class="float-none md:float-left">
+      &copy; {today.getFullYear()} John Konecny. All rights reserved.
+    </div>
+    <div class="float-right">
       <a href="https://github.com/jfkonecn" target="_blank">
         <span class="sr-only">My GitHub</span>
         <svg
