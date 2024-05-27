@@ -3,15 +3,17 @@ import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
 ---
 
-<header class="py-10 px-8 border-b">
-  <nav class="w-full max-w-screen-lg m-auto h-full text-center">
+<header class="md:py-10 md:px-8 border-b">
+  <nav class="w-full max-w-screen-lg m-auto h-full min-h-8 text-center">
     <h2 class="float-none md:float-left">
       <HeaderLink href="/">{SITE_TITLE}</HeaderLink>
     </h2>
     <div class="float-none md:float-right *:px-4">
-      <HeaderLink href="https://github.com/jfkonecn" target="_blank"
-        >GitHub</HeaderLink
+      <HeaderLink href="/">Blog</HeaderLink>
+      <HeaderLink href="/blog/2024/the-factorio-architecture"
+        >The Factorio Architecture</HeaderLink
       >
+      <HeaderLink href="/about">About</HeaderLink>
     </div>
   </nav>
 </header>
