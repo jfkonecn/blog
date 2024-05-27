@@ -38,7 +38,7 @@ const { title, subTitle, tldr, pubDate, updatedDate } = Astro.props;
           <p>{tldr}</p>
           <hr />
           <slot />
-          <a href="/">Back to home</a>
+          <a href={import.meta.env.BASE_URL}>Back to home</a>
         </div>
       </article>
     </Main>

@@ -19,7 +19,7 @@ const posts = (await getCollection("blog")).sort(
         <li class="w-full">
           <a
             class="flex flex-row gap-4 p-4 hover:underline"
-            href={`/blog/${post.slug}/`}
+            href={`${import.meta.env.BASE_URL}blog/${post.slug}/`}
           >
             <div class="flex flex-col">
               <h2 class="text-xl font-bold">{post.data.title}</h2>
