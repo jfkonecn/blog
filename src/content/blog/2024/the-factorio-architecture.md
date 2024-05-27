@@ -197,9 +197,9 @@ difficult to fully understand the design of a system. Chemical Engineers use
 process [flow diagrams](https://en.wikipedia.org/wiki/Process_flow_diagram) to
 aid in understanding complex systems. Process flow diagrams connect individual
 unit operations together using pictures. I have put together a process flow
-diagram for my [previous weather API example](/2024/weather-api-call.svg)
+diagram for my [previous weather API example](weather-api-call.svg)
 as well as a slightly more complicated example of an API that [fetches medical patient
-information](/2024/mvc-flow.svg). These visualizations give a clear picture to
+information](mvc-flow.svg). These visualizations give a clear picture to
 developers of what needs to be done, but still gives them the absolutely
 necessary creative freedom to organize and structure the code as they see fit.
 
