@@ -7,7 +7,7 @@ type Props = {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = "favicon.svg" } = Astro.props;
+const { title, description, image = "placeholder.jpg" } = Astro.props;
 const imageUrl = `${Astro.site?.toString().slice(0, -1)}${import.meta.env.BASE_URL}${image}`;
 ---
 
