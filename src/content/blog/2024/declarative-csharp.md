@@ -1,8 +1,8 @@
 ---
 title: "Declarative C#"
-description: "Explore the benefits of declarative programming in C#"
+subTitle: "Explore the benefits of declarative programming in C#"
+tldr: "test"
 pubDate: "April 6 2024"
-heroImage: "/2024/declarative-csharp.jpg"
 ---
 
 Declarative programming is a bit of a fad in programming and with good reason.
