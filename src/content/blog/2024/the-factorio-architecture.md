@@ -249,11 +249,20 @@ to predict the building and operational cost since fetching data by ID and
 displaying the results is such a common algorithm in many software projects.
 This is not to say that you would only have one “true” way to perform these
 algorithms; instead, over time, many computer scientists would contribute
-multiple compositions of unit operations—in much the same way as there are
+multiple compositions of unit operations in much the same way as there are
 different algorithms for an operation as simple as sorting. They would have
 different assumptions built into them, but, if picked carefully, would enable
 significant performance gains without requiring a developer who is an expert
-in every kind of algorithm.
+in creating high performance algorithms from scratch.
+
+Players in Factorio have discovered the same principle. You can see many common
+design patterns all over the internet. Here is an [example](https://www.youtube.com/watch?v=SAf9P2B3YEU)
+for smelting. You will notices there is a heavy restriction on the layout of the
+machines, but that in turn allows the player to not think too much about why
+the layout is the way it is. Instead the player only needs to know how to reproduce
+the layout which means they do not need to be an expert in designing the patterns
+from scratch. They simple only need to know how and when to use them. This is
+an essential aspect of engineering.
 
 ## This is a waste of time. Upfront planning is always wrong and changing software is quick, so why bother?
 
